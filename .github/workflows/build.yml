@@ -16,10 +16,10 @@ jobs:
           flutter-version: '3.24.0'
           
       - name: Build APK
-        run: cd Dropix && flutter pub get && flutter build apk --release
+        run: cd $(ls -d */ | head -n 1) && flutter pub get && flutter build apk --release
         
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: dropix-apk
-          path: Dropix/build/app/outputs/flutter-apk/app-release.apk
+          path: '*/build/app/outputs/flutter-apk/app-release.apk'
