@@ -18,7 +18,8 @@ on:
         with:
           distribution: 'temurin'
           java-version: '17'
-          
+        path: '*/build/app/outputs/
+flutter-apk/app-release.apk'  
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -33,4 +34,4 @@ on:
         uses: actions/upload-artifact@v4
         with:
           name: dropix-apk
-          path: '*/build/app/outputs/flutter-apk/app-release.apk'
+          
