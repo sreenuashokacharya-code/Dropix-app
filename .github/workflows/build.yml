@@ -26,10 +26,7 @@ on:
           channel: 'stable'
           
       - name: Build APK
-       name: Build APK
   run: |
-    cd Dropix
-    flutter pub get
     flutter build apk --release
           
       - name: Upload APK
